@@ -1,0 +1,99 @@
+<!--#include file="head.html"-->
+
+<img src="/upload/2018-06-01/3.png" class="am-img-responsive am-center img-min-with" alt="{$categoryInfo.name}" />
+
+<section class="am-padding-vertical-xl services">
+    <div class="am-container">
+
+        <p class="am-margin-top-0 am-margin-bottom-sm"><a href="__ROOT__/">首页</a><!--foreach{$crumb as $vo}--> <span class="am-icon-angle-double-right"></span> <a href="/article/gongsifalvshiwu.html">{$vo.name}</a><!--{/foreach}--></p>
+
+        <h3 class="page-title">{$categoryInfo.name} <span>zhenya law services</span></h3>
+
+        <div class="am-tabs am-margin-top-lg" data-am-tabs="{noSwipe: 1}">
+            <ul class="am-nav">
+                <li>
+                    <!--if{ $contentInfo['title'] ==  '公司法律事务'  }-->
+                    <a href="/article/gongsifalvshiwu.html" class="active">公司法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{else}-->
+                    <a href="/article/gongsifalvshiwu.html">公司法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{/if}-->
+                </li>
+                <li>
+                    <!--if{ $contentInfo['title'] ==  '政府法律事务'  }-->
+                    <a href="/article/zhengfufalvshiwu.html" class="active">政府法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{else}-->
+                    <a href="/article/zhengfufalvshiwu.html">政府法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{/if}-->
+                </li>
+                <li>
+                    <!--if{ $contentInfo['title'] ==  '国际法律事务'  }-->
+                    <a href="/article/guojifalvshiwu.html" class="active">国际法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{else}-->
+                    <a href="/article/guojifalvshiwu.html">国际法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{/if}-->
+                </li>
+                <li>
+                    <!--if{ $contentInfo['title'] ==  '房地产与建筑工程法律事务'  }-->
+                    <a href="/article/fangdichanyujianzhugongchengfa.html" class="active">房地产与建筑工程法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{else}-->
+                    <a href="/article/fangdichanyujianzhugongchengfa.html">房地产与建筑工程法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{/if}-->
+                </li>
+                <li>
+                    <!--if{ $contentInfo['title'] ==  '金融法律事务'  }-->
+                    <a href="/article/jinrongfalvshiwu.html" class="active">金融法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{else}-->
+                    <a href="/article/jinrongfalvshiwu.html">金融法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{/if}-->
+                </li>
+                <li>
+                    <!--if{ $contentInfo['title'] ==  '知识产权法律事务'  }-->
+                    <a href="/article/zhishichanquanfalvshiwu.html" class="active">知识产权法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{else}-->
+                    <a href="/article/zhishichanquanfalvshiwu.html">知识产权法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{/if}-->
+                </li>
+                <li>
+                    <!--if{ $contentInfo['title'] ==  '民事法律事务'  }-->
+                    <a href="/article/minshifalvshiwu.html" class="active">民事法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{else}-->
+                    <a href="/article/minshifalvshiwu.html">民事法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{/if}-->
+                </li>
+                <li>
+                    <!--if{ $contentInfo['title'] ==  '刑事法律事务'  }-->
+                    <a href="/article/xingshifalvshiwu.html" class="active">刑事法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{else}-->
+                    <a href="/article/xingshifalvshiwu.html">刑事法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{/if}-->
+                </li>
+                <li>
+                    <!--if{ $contentInfo['title'] ==  '家族财富管理法律事务'  }-->
+                    <a href="/article/jiazucaifuguanlifalvshiwu.html" class="active">家族财富管理法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{else}-->
+                    <a href="/article/jiazucaifuguanlifalvshiwu.html">家族财富管理法律事务 <span class="am-icon-caret-right"></span></a>
+                    <!--{/if}-->
+                </li>
+
+
+            </ul>
+
+            <div class="tabs-bd">
+
+                <article class="tab-title-box am-padding-horizontal-lg">
+                    <span class="am-text-xl">{$contentInfo.title}</span>
+                    <img src="/upload/2018-06-01/59.png" class="am-img-responsive am-margin-top-lg" alt="{$categoryInfo.name}" />
+                </article>
+
+                <article class="am-padding-left-xs tab-context">{$contentInfo.content}</article>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--#include file="footer.html"-->

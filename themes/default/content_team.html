@@ -1,0 +1,60 @@
+<!--#include file="head.html"-->
+
+<img src="/upload/2018-06-01/3.png" class="am-img-responsive am-center img-min-with" alt="{$categoryInfo.name}" />
+
+<section class="am-padding-vertical-xl team-box">
+    <div class="am-container">
+
+        <p class="am-margin-top-0 am-margin-bottom-sm"><a href="__ROOT__/">首页</a><!--foreach{$crumb as $vo}--> <span class="am-icon-angle-double-right"></span> <a href="{$vo.url}">{$vo.name}</a><!--{/foreach}--></p>
+
+        <h3 class="page-title">{$categoryInfo.name} <span>zhenya lawyer team</span></h3>
+
+        <article class="team-grey-container">
+
+            <div class="am-padding-xl">
+
+                <p class="l1">{$contentInfo.lsxm} <span>{$contentInfo.position}</span></p>
+
+                <p class="l2">{$contentInfo.posTitle}</p>
+
+                <hr>
+
+                <p class="l3">擅长领域：{$contentInfo.gywm}</p>
+
+                <p class="l4">Email：{$contentInfo.mail}</p>
+
+            </div>
+
+
+            <img src="{$contentInfo.image}" class="am-img-responsive" alt="{$categoryInfo.title}" />
+        </article>
+
+
+        <div class="person-intro am-padding-top-lg am-padding-horizontal-sm">
+            <img src="/upload/2018-06-01/42.png" class="am-img-responsive" alt="{$categoryInfo.name}" />
+
+            <p class="am-margin-0 am-padding-left-sm am-text-sm">个人经历：<br/>{$contentInfo.experience}</p>
+        </div>
+
+        <div class="person-intro am-padding-top-sm am-padding-horizontal-sm am-margin-top-xs">
+            <img src="/upload/2018-06-01/43.png" class="am-img-responsive" alt="{$categoryInfo.name}" />
+
+            <p class="am-margin-0 am-padding-left-sm am-text-sm">社会职务：<br/>{$contentInfo.social}</p>
+        </div>
+
+        <div class="person-intro am-padding-top-sm am-padding-horizontal-sm am-margin-top-xs">
+            <img src="/upload/2018-06-01/44.png" class="am-img-responsive" alt="{$categoryInfo.name}" />
+
+            <p class="am-margin-0 am-padding-left-sm am-text-sm">主要作品：<br/>{$contentInfo.products}</p>
+        </div>
+
+        <div class="person-intro am-padding-top-sm am-padding-horizontal-sm am-margin-top-xs">
+            <img src="/upload/2018-06-01/45.png" class="am-img-responsive" alt="{$categoryInfo.name}" />
+
+            <p class="am-margin-0 am-padding-left-sm am-text-sm">职业格言：<br/>{$contentInfo.zyly}</p>
+        </div>
+    </div>
+</section>
+
+
+<!--#include file="footer.html"-->

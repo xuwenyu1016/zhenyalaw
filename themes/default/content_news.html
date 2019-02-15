@@ -1,0 +1,57 @@
+<!--#include file="head.html"-->
+
+<img src="/upload/2018-06-01/3.png" class="am-img-responsive am-center img-min-with" alt="{$categoryInfo.name}" />
+
+<section class="news-container am-padding-vertical-xl">
+    <div class="am-container">
+
+        <p class="am-margin-top-0 am-margin-bottom-sm"><a href="__ROOT__/">首页</a><!--foreach{$crumb as $vo}--> <span class="am-icon-angle-double-right"></span> <a href="{$vo.url}">{$vo.name}</a><!--{/foreach}--></p>
+
+        <div class="news-article">
+
+            <article class="am-padding-lg">
+                <h2 class="am-text-center am-padding-top-sm am-text-xl am-margin-0">{$contentInfo.title}</h2>
+                <p class="am-text-center am-margin-vertical-sm am-text-sm">时间：<time pubdate datetime="{date('Y-m-d H:i:s',$contentInfo.time)}">{date('Y-m-d H:i:s',$contentInfo.time)}</time></p>
+
+                <div class="article-box">{$contentInfo.content}</div>
+
+                <ul class="am-margin-top-xl am-avg-sm-2 pre-next-line">
+                    <li>
+                        <div class="am-text-sm am-text-truncate"><span>上一篇：</span>
+                            <!--if{empty($prevInfo['aurl'])}-->
+                            <a class="am-link-muted ">暂无</a>
+                            <!--{else}-->
+                            <a href="{$prevInfo.aurl}" class="">{$prevInfo.title}</a>
+                            <!--{/if}-->
+                        </div>
+                    </li>
+                    <li>
+
+                        <div class="am-text-sm am-text-truncate"><span>下一篇：</span>
+                            <!--if{empty($nextInfo['aurl'])}-->
+                            <a class="">暂无</a>
+                            <!--{else}-->
+                            <a href="{$nextInfo.aurl}" class="">{$nextInfo.title}</a>
+                            <!--{/if}-->
+                        </div>
+                    </li>
+                </ul>
+            </article>
+
+            <aside class="am-padding-lg">
+                <p class="am-margin-top-0 am-margin-bottom-sm"><b>更多精彩内容</b></p>
+                <!--list{app="DuxCms" label="contentList" class_id=2 sub=true limit=3 order="time desc"}-->
+                <a href="{$list.aurl}">
+                    <img src="{$list.image}" alt="{$list.title}" class="img-responsive" />
+                    <p class="am-text-sm am-margin-top-xs am-margin-bottom-sm">{$list.title}</p>
+                </a>
+                <!--{/list}-->
+            </aside>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!--#include file="footer.html"-->

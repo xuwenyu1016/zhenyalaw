@@ -1,0 +1,42 @@
+<!--#include file="header.html"-->
+
+<img src="/upload/2018-06-01/75.png" class="am-img-responsive am-center" alt="{$categoryInfo.name}" />
+
+<section class="news-filter am-padding-sm">
+
+    <p class="am-margin-top-0 am-margin-bottom-sm am-text-sm"><a href="__ROOT__/">首页</a><!--foreach{$crumb as $vo}--> <span class="am-icon-angle-double-right"></span> <a href="{$vo.url}">{$vo.name}</a><!--{/foreach}--></p>
+
+    <h3 class="page-title">{$categoryInfo.name} <span>company news</span></h3>
+
+    <div class="filter-box">
+        <!--foreach{$condition as $vo}-->
+        <article class="am-padding-top-xs am-margin-bottom-sm">
+            <div class="select-all <!--if{$vo.value==="all"}-->  selected <!--{/if}--> "><a href="{$vo.url}">全部</a></div><!--foreach{$vo.config as $v}--><div <!--if{$v.value == $v.i}--> class="selected" <!--{/if}--> ><a href="{$v.url}">{$v.name}</a></div><!--{/foreach}-->
+        </article>
+        <!--{/foreach}-->
+    </div>
+
+    <article class="news-listing am-margin-top-sm">
+
+        <!--foreach{$pageList as $vo}-->
+
+        <a href="{$vo.aurl}">
+            <img src="{$vo.image}" class="am-img-responsive am-center" alt="{$vo.lsxm}律师" />
+
+            <div class="">
+                <p class="am-margin-vertical-0 am-text-sm am-text-truncate">{$vo.title}</p>
+                <p class="am-margin-vertical-0 am-text-sm am-text-truncate">{$vo.description}</p>
+
+                <span class="am-text-sm">阅读全文 <small class="am-icon-angle-double-right"></small></span>
+            </div>
+        </a>
+
+        <!--{/foreach}-->
+
+        <div class="pagination">{$page}</div>
+
+    </article>
+
+</section>
+
+<!--#include file="footer.html"-->
